@@ -12,4 +12,11 @@ public class AddItemCart {
         driver.findElement(By.xpath("//*[@id=\"add-to-cart-sauce-labs-backpack\"]")).click();
     }
 
+    public static String getCartNumber ()
+    {
+        String ActualCartNumber = driver.findElement(By.className("shopping_cart_badge")).getText();
+
+        return ActualCartNumber;
+    }
+
 }
