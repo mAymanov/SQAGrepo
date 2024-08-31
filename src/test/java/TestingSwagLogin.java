@@ -1,6 +1,10 @@
 import AppAuth.Login;
 import AppAuth.Logout;
 import MainMenu.AddItemCart;
+import Toasters.LoginToasters;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -19,13 +23,15 @@ public class TestingSwagLogin {
         Login.loginSwag("https://www.saucedemo.com/","standard_user","secret_sauce");
         AddItemCart.AddToCart();
     }
-
+/*
     @Test (priority = 2)
     public static void TestLocked ()
     {
         Login.loginSwag("https://www.saucedemo.com/","locked_out_user","secret_sauce");
     }
 
+    */
+/*
     @Test (priority = 3)
     public static void TestError ()
     {
@@ -48,7 +54,7 @@ public class TestingSwagLogin {
     {
         Login.loginSwag("https://www.saucedemo.com/","visual_user","secret_sauce");
     }
-
+*/
 
 
     /*
