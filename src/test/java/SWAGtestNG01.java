@@ -1,17 +1,16 @@
 import AppAuth.Login;
 import MainMenu.AddItemCart;
 import org.testng.Assert;
-import org.testng.annotations.Test;
 
-public class TestingSwagLogin {
+public class SWAGtestNG01 {
 
-    @Test(priority = 1)
+    @org.testng.annotations.Test(priority = 1)
     public static void Login() {
         Login.loginSwag("https://www.saucedemo.com/", "standard_user", "secret_sauce");
         //  AddItemCart.AddToCart();
     }
 
-    @Test(priority = 2)
+    @org.testng.annotations.Test(priority = 2)
     public static void TestAddToCart() {
         String siteUrl = "https://www.saucedemo.com/";
         String userName =  "standard_user";
