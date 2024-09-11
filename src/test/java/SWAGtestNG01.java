@@ -22,7 +22,7 @@ public class SWAGtestNG01 {
        String pageName = AddItemCart.GetPageTitle();
        Assert.assertEquals(pageName,"Swag Labs");
     }
-    //heloo
+
 /*
     @Test (priority = 2)
     public static void TestLocked ()
