@@ -6,17 +6,22 @@ import org.testng.annotations.Test;
 public class TestingSwagLogin {
 
     @Test(priority = 1)
-    public static void TestCart() {
+    public static void Login() {
         Login.loginSwag("https://www.saucedemo.com/", "standard_user", "secret_sauce");
         //  AddItemCart.AddToCart();
     }
 
     @Test(priority = 2)
     public static void TestAddToCart() {
-        Login.loginSwag("https://www.saucedemo.com/", "standard_user", "secret_sauce");
-        AddItemCart.AddToCart();
+        String siteUrl = "https://www.saucedemo.com/";
+        String userName =  "standard_user";
+        String userPassword = "secret_sauce";
+        Login.loginSwag(siteUrl, userName , userPassword);
+       AddItemCart.AddToCart();
        String actNum = AddItemCart.getCartNumber();
-        Assert.assertEquals(actNum,"1");
+       Assert.assertEquals(actNum,"1");
+       String pageName = AddItemCart.GetPageTitle();
+       Assert.assertEquals(pageName,"Swag Labs");
     }
 /*
     @Test (priority = 2)
